@@ -3,9 +3,7 @@ import './App.css';
 
 import {
   Link,
-  Route,
-  Switch,
-  Redirect
+  Route
 } from 'react-router-dom';
 
 import Home from './components/Home';
@@ -43,12 +41,9 @@ class App extends Component {
           </ul>
         </nav>
         <div className="main-content">
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/users" component={Users} />
-            <Redirect to="/" />
-          </Switch>
+          <Route path="/"  component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/users" component={Users} />
         </div>
       </div>
     );
